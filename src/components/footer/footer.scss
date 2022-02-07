@@ -1,0 +1,54 @@
+.footer {
+  height: 200px;
+  padding: 0px 20%;
+  position: sticky;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  bottom: -200px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .copy-divider {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .social-icons {
+      display: flex;
+      align-items: center;
+    .button {
+      height: 50px;
+      margin-left: 20px;
+      width: 50px;
+      border: 3px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .button i {
+      font-size: 26px;
+      z-index: 1;
+      color: #333;
+    }
+    .fill {
+      background-color: #333;
+      height: 130%;
+      width: 130%;
+      border-radius: 50%;
+      position: absolute;
+      left: -105%;
+      bottom: -105%;
+      transition: all 0.5s ease;
+    }
+    .button:hover .fill {
+      transform: translate(70%, -70%);
+    }
+    .button:hover i {
+      color: white;
+    }
+  }
+}

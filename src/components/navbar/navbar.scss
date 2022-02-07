@@ -4,22 +4,29 @@
     justify-content: space-between;
     padding: 30px 20vw;
     width: 100vw;
-    .name-logo{
-        font-family: 'Great Vibes', cursive;
-        font-size: 44px;
-        font-weight: 600;
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    z-index: 4;
+    .logo-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .name-logo{
+            font-family: 'Great Vibes', cursive;
+            font-size: 44px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        img{
+            height: 60px;
+        }
     }
     .list-wrapper{
         display: flex;
         align-items: center;
         span{
-            position: relative;
             margin-left: 40px;
             cursor: pointer;
-            z-index: 1;
         }
     }
 }

@@ -1,9 +1,12 @@
 import "./navbar.scss";
+import logo from "./kartikey.svg";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <span className="name-logo">Kartikey</span>
+      <div className="logo-wrapper">
+        <img src={logo} alt="kartikey-logo" />
+      </div>
       <div className="list-wrapper">
         <span>Home</span>
         <span>About me</span>

@@ -3,6 +3,7 @@ import Particles from "react-tsparticles";
 import particleOptions from "./particles-options";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <Particles id="ts-particles" options={particleOptions} />
       </div>
+      <Footer />
     </div>
   );
 }
