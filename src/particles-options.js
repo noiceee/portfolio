@@ -1,10 +1,7 @@
 const options = {
     backgroundMode: {
-      enable: true,
+      enable: false,
       zIndex: -1,
-    },
-    background: {
-      color: "#000",
     },
     fpsLimit: 60,
     interactivity: {
@@ -24,9 +21,9 @@ const options = {
       color: { value: "#fff" },
       links: {
         color: "#ffffff",
-        distance: 160,
+        distance: 120,
         enable: true,
-        opacity: 0.3,
+        opacity: 0.5,
         width: 1,
       },
       move: {
@@ -39,10 +36,10 @@ const options = {
         speed: 1,
         straight: false,
       },
-      number: { density: { enable: true, area: 12 }, value: 1 },
+      number: { density: { enable: true, area: 8 }, value: 1 },
       opacity: {
         random: true,
-        value: 0.4,
+        value: 0.5,
       },
       shape: {
         type: "circle",

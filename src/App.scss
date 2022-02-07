@@ -1,5 +1,26 @@
 .app{
     color: white;
+    .top-section{
+        height: 100vh;
+        position: relative;
+        #ts-particles{
+            position: absolute;
+            top: 0px;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+        }
+        .particles-cover{
+            backdrop-filter: invert(100%);
+            position: absolute;
+            right: 0px;
+            width: 30%;
+            height: 100%;
+            z-index: 2;
+            // background-color: white;
+        }
+    }
     h1{
         font-size: 2rem;
     }
