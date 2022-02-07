@@ -25,3 +25,14 @@
         font-size: 2rem;
     }
 }
+@media screen and(max-width: 1080px) {
+    .app{
+        .top-section{
+            .particles-cover{
+                height: 30%;
+                width: 100%;
+                bottom: 0px;
+            }
+        }
+    }
+}
