@@ -1,42 +1,49 @@
-.navbar{
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20vw;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  z-index: 6;
+  .logo-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 20vw;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed;
-    z-index: 4;
-    .logo-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .name-logo{
-            font-family: 'Great Vibes', cursive;
-            font-size: 44px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        img{
-            height: 60px;
-        }
+    justify-content: center;
+    img {
+      cursor: pointer;
+      height: 60px;
     }
-    .list-wrapper{
-        display: flex;
-        align-items: center;
-        span{
-            margin-left: 40px;
-            cursor: pointer;
-        }
+  }
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 70%,
+    rgb(0, 0, 0) 30%
+  );
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  .list-wrapper {
+      align-items: center;
+      span {
+      font-weight: 700;
+      margin-left: 40px;
+      cursor: pointer;
+    //   position: relative;
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     background-color: red;
+    //     left: 0px;
+    //     bottom: 0px;
+    //     width: 0%;
+    //     height: 2px;
+    //     transition: all .5s ease;
+    //   }
+    //   &:hover::before{
+    //       width: 100%;
+    //   }
     }
-}
-.particles-cover{
-    overflow:hidden;
-    .navbar{
-        color: black;
-        position: absolute;
-        right: 0px;
-        font-weight: 600;
-        background:linear-gradient(90deg, white 80%, transparent 20%);
-    }
+  }
 }

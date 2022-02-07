@@ -10,7 +10,6 @@ function App() {
     <div className="app">
       <div className="top-section">
         <div className="particles-cover">
-          <Navbar />
         </div>
         <Navbar />
         <Hero />
