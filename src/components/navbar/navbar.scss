@@ -8,9 +8,8 @@
   z-index: 6;
   transition: all .1s linear; 
   &.scrolled {
-    backdrop-filter: blur(22px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.164);
-    //   background-color: rgba(0, 0, 0, 0.922);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.664);
+    background-color: rgba(0, 0, 0, 0.95);
   }
   .logo-wrapper {
     display: flex;
@@ -46,6 +45,11 @@
 }
 @media screen and(max-width: 1080px) {
   .navbar {
+      .logo-wrapper{
+          img{
+              height: 36px;
+          }
+      }
     .nav-toggler {
       display: flex;
     }
@@ -82,7 +86,7 @@
   }
 }
 @media screen and(min-width: 1080px) {
-  .navbar {
+  .navbar:not(.scrolled) {
     background: -webkit-linear-gradient(
       0deg,
       rgb(255, 255, 255) 70%,

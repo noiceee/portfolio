@@ -21,7 +21,9 @@ export default function Navbar() {
         <span onClick={()=>{window.location.href = "#"}}>Projects</span>
         <span onClick={()=>{window.location.href = "#"}}>Resume</span>
       </div>
-      <div className="nav-toggler" onClick={()=>{setToggle(!toggled)}}>
+      <div className="nav-toggler" onClick={()=>{
+          setToggle(!toggled);
+      }}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
