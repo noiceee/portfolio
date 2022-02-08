@@ -6,10 +6,17 @@
   width: 100vw;
   position: fixed;
   z-index: 6;
-  transition: all .1s linear; 
+  transition: all .3s linear; 
   &.scrolled {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.664);
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.95);
+  }
+  a{
+      text-decoration: none;
+      color: white;
+      &:active{
+          color: white;
+      }
   }
   .logo-wrapper {
     display: flex;
@@ -43,7 +50,7 @@
     }
   }
 }
-@media screen and(max-width: 1080px) {
+@media screen and(max-width: 1250px) {
   .navbar {
       .logo-wrapper{
           img{
@@ -85,7 +92,7 @@
     }
   }
 }
-@media screen and(min-width: 1080px) {
+@media screen and(min-width: 1250px) {
   .navbar:not(.scrolled) {
     background: -webkit-linear-gradient(
       0deg,
