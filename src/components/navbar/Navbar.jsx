@@ -24,13 +24,13 @@ export default function Navbar() {
       </div>
       <div className={toggled ? "list-wrapper" : "list-wrapper off"}>
         <span>
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </span>
         <span>
-          <a href="#">About me</a>
+          <a href="/">About me</a>
         </span>
         <span>
-          <a href="#">Projects</a>
+          <a href="/">Projects</a>
         </span>
         <span>
           <a href={cv} download>Resume</a>
