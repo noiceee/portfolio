@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="copyright">
-        <span>© Copyright 2022</span>
+        <span>© Copyright {new Date().getFullYear()}</span>
         <span className="copy-divider">|</span>
         <span>Kartikey Singh</span>
       </div>
