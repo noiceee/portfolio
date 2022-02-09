@@ -36,10 +36,12 @@
       border: 10px solid black;
       filter: saturate(0) contrast(1.3);
       overflow: hidden;
+      picture{
       background-color: white;
       display: flex;
       align-items: center;
       justify-content: center;
+      }
       img {
         height: 110%;
         width: 110%;

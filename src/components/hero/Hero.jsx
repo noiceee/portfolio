@@ -1,5 +1,6 @@
 import "./hero.scss";
 import profilePic from "./kartimk.png";
+import profilePicwebp from "./kartimk.webp";
 
 export default function Hero() {
   return (
@@ -12,7 +13,11 @@ export default function Hero() {
       </div>
       <div className="img-container">
         <div className="img-wrapper">
-          <img src={profilePic} alt="kartikey singh" />
+          <picture>
+            <source type="image/webp" srcSet={profilePicwebp}/>
+            <source type="image/jpeg" srcSet={profilePic}/>
+            <img src={profilePicwebp} alt="kartikey singh" />
+          </picture>
         </div>
       </div>
     </div>
