@@ -15,7 +15,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId, event) => {
+    event.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -29,18 +30,19 @@ export default function Navbar() {
         <img
           src={logo}
           alt="kartikey-logo"
-          onClick={() => scrollToSection('home')}
+          onClick={(e) => scrollToSection('home', e)}
+          style={{ cursor: 'pointer' }}
         />
       </div>
       <div className={toggled ? "list-wrapper" : "list-wrapper off"}>
         <span>
-          <a onClick={() => scrollToSection('home')}>Home</a>
+          <a href="#home" onClick={(e) => scrollToSection('home', e)}>Home</a>
         </span>
         <span>
-          <a onClick={() => scrollToSection('about')}>About</a>
+          <a href="#about" onClick={(e) => scrollToSection('about', e)}>About</a>
         </span>
         <span>
-          <a onClick={() => scrollToSection('projects')}>Projects</a>
+          <a href="#projects" onClick={(e) => scrollToSection('projects', e)}>Projects</a>
         </span>
         <span>
           <a href={cv} download>Resume</a>
@@ -51,6 +53,8 @@ export default function Navbar() {
         onClick={() => {
           setToggle(!toggled);
         }}
+        aria-label="Toggle navigation"
+        aria-expanded={toggled}
       >
         <div className="bar"></div>
         <div className="bar"></div>
