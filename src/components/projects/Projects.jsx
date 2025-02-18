@@ -31,7 +31,7 @@ export default function Projects() {
         const sortedProjects = data
           .filter(repo => !repo.fork)
           .sort((a, b) => b.size - a.size);
-        setProjects(sortedProjects.slice(0, 10));
+        setProjects(sortedProjects.slice(0, 12));
         console.log(sortedProjects);
         setLoading(false);
       });
