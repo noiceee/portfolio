@@ -30,8 +30,9 @@ export default function Projects() {
       .then(data => {
         const sortedProjects = data
           .filter(repo => !repo.fork)
-          .sort((a, b) => b.stargazers_count - a.stargazers_count);
-        setProjects(sortedProjects);
+          .sort((a, b) => b.size - a.size);
+        setProjects(sortedProjects.slice(0, 10));
+        console.log(sortedProjects);
         setLoading(false);
       });
   }, []);
@@ -93,6 +94,9 @@ export default function Projects() {
           ))}
         </div>
       )}
+        <a className="see-more" href={"https://github.com/noiceee"} target="_blank" rel="noopener noreferrer">
+            See More
+        </a>
     </div>
   );
 } 
