@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 20vw;
+  padding: 20px 10vw;
   width: 100vw;
   position: fixed;
   z-index: 6;
   transition: all .3s linear; 
   &.scrolled {
+    padding: 15px 10vw;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.664);
     background: rgba(0, 0, 0, 0.95);
   }
@@ -24,20 +25,28 @@
     justify-content: center;
     img {
       cursor: pointer;
-      height: 50px;
+      height: 40px;
     }
   }
   .list-wrapper {
     align-items: center;
     span {
-      font-weight: 700;
-      margin-left: 40px;
+      font-weight: 600;
+      margin-left: 35px;
       cursor: pointer;
+      
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        padding: 8px;
+        font-size: 0.95rem;
+      }
     }
   }
   .nav-toggler {
-    height: 20px;
-    width: 24px;
+    height: 18px;
+    width: 22px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -50,48 +59,42 @@
     }
   }
 }
-@media screen and(max-width: 1250px) {
+@media screen and(max-width: 768px) {
   .navbar {
-      .logo-wrapper{
-          img{
-              width: 36px;
-              height: 36px;
-          }
-      }
+    padding: 15px 5vw;
+    
+    &.scrolled {
+      padding: 12px 5vw;
+    }
+    
     .nav-toggler {
       display: flex;
     }
-    .nav-toggler {
-    //   position: absolute;
-      z-index: 2;
-      right: 40px;
-    }
+    
     .list-wrapper {
-      backdrop-filter: blur(40px);
-      width: 60%;
+      position: fixed;
+      top: 0;
+      left: 0;
       height: 100vh;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.582);
-      position: absolute;
-      top: 0px;
-      right: 0px;
+      width: 100vw;
+      background-color: black;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding-top: 110px;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      transition: all 0.3s ease-in-out;
+      
       &.off {
-        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
       }
+      
       span {
-        margin: 0px;
-        padding: 20px;
-        width: 100%;
-        a{  
-            display: block;
-            width: 100%;
-        }
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.466);
+        margin: 0;
+        
+        a {
+          font-size: 1.2rem;
         }
       }
     }

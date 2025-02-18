@@ -1,14 +1,26 @@
 import "./navbar.scss";
 import logo from "./kartikey.svg";
-import cv from "./KartikeySingh-Frontend.pdf";
-import { useState } from "react";
+import cv from "./KartikeySingh_SDE.pdf";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [toggled, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  window.onscroll = () => {
-    setScrolled(window.pageYOffset !== 0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.pageYOffset !== 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setToggle(false);
+    }
   };
 
   return (
@@ -17,20 +29,18 @@ export default function Navbar() {
         <img
           src={logo}
           alt="kartikey-logo"
-          onClick={() => {
-            window.location.href = "#";
-          }}
+          onClick={() => scrollToSection('home')}
         />
       </div>
       <div className={toggled ? "list-wrapper" : "list-wrapper off"}>
         <span>
-          <a href="/">Home</a>
+          <a onClick={() => scrollToSection('home')}>Home</a>
         </span>
         <span>
-          <a href="/">About me</a>
+          <a onClick={() => scrollToSection('about')}>About</a>
         </span>
         <span>
-          <a href="/">Projects</a>
+          <a onClick={() => scrollToSection('projects')}>Projects</a>
         </span>
         <span>
           <a href={cv} download>Resume</a>

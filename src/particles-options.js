@@ -82,7 +82,7 @@ const options = {
         speed: 2,
         straight: false
       },
-      number: { density: { enable: true, value_area: 800 }, value: 80 },
+      number: { density: { enable: true, value_area: 800 }, value: 40 },
       opacity: {
         anim: { enable: false, opacity_min: 0.1, speed: 1, sync: false },
         random: false,
